@@ -1,0 +1,216 @@
+
+/* ===== CONFIGURAÇÕES GERAIS ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #101321;
+    color: #F3F5FA;
+    font-family: 'Inter', sans-serif;
+    h1, h2, h3, h4 {
+    font-family: 'Space Grotesk', sans-serif;
+    }
+    line-height: 1.6;
+}
+
+
+/* ===== CABEÇALHO E NAVEGAÇÃO ===== */
+
+.header {
+    width: 100%;
+    padding: 20px 8%;
+    position: relative;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* LOGO */
+
+.logo img {
+    width: 170px;
+    height: auto;
+    display: block;
+}
+
+/* MENU */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: #F3F5FA;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* SUBLINHADO ANIMADO */
+
+.nav-menu a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -7px;
+    left: 0;
+    background: linear-gradient(
+        90deg,
+        #246BFD,
+        #7652D9
+    );
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #8EAFFF;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+/* BOTÃO DE TEMA */
+
+.theme-toggle {
+    width: 42px;
+    height: 42px;
+    border: 1px solid #7652D9;
+    border-radius: 50%;
+    background-color: #191F33;
+    color: #F3F5FA;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #7652D9;
+}
+
+
+/* ===== SEÇÃO HERO ===== */
+
+.hero {
+    min-height: 75vh;
+    padding: 80px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+/* CONTEÚDO TEXTUAL */
+
+.hero-content {
+    flex: 1;
+    max-width: 650px;
+}
+
+.hero-content h1 {
+    font-size: clamp(42px, 5vw, 68px);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.hero-content h2 {
+    font-size: clamp(22px, 2.5vw, 32px);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 19px;
+    color: #B9C2D8;
+    margin-bottom: 12px;
+}
+
+.hero-areas {
+    font-size: 14px;
+    color: #8EAFFF;
+    margin-bottom: 35px;
+}
+
+/* FOTOGRAFIA */
+
+.hero-image {
+    flex: 0 0 280px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 280px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #7652D9;
+    box-shadow: 0 0 30px rgba(118, 82, 217, 0.20);
+    transition: transform 0.4s ease,
+                box-shadow 0.4s ease;
+}
+
+.hero-image img:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 35px rgba(36, 107, 253, 0.40);
+}
+
+/* BOTÕES */
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 13px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #246BFD, #7652D9);
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(36, 107, 253, 0.30);
+}
+
+.btn-secondary {
+    border: 1px solid #7652D9;
+    color: #F3F5FA;
+}
+
+.btn-secondary:hover {
+    background-color: #7652D9;
+    transform: translateY(-3px);
+}

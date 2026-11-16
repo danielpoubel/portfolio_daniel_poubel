@@ -1,0 +1,50 @@
+
+/* ===== RESPONSIVIDADE DO HERO ===== */
+
+/* TABLETS */
+@media (max-width: 900px) {
+
+    .hero {
+        padding: 70px 6%;
+        gap: 35px;
+    }
+
+    .hero-image {
+        flex-basis: 230px;
+    }
+
+    .hero-image img {
+        max-width: 230px;
+    }
+
+}
+
+/* CELULARES */
+@media (max-width: 600px) {
+
+    .hero {
+        min-height: auto;
+        padding: 60px 7%;
+        flex-direction: column;
+        text-align: center;
+        gap: 35px;
+    }
+
+    .hero-image {
+        flex-basis: auto;
+        order: -1;
+    }
+
+    .hero-image img {
+        max-width: 200px;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+}
