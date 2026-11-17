@@ -162,8 +162,10 @@ body {
 .hero-image img {
     width: 100%;
     max-width: 280px;
+    background-color: #FFFFFF;
     aspect-ratio: 1 / 1;
     object-fit: cover;
+    object-position: center 20%;
     border-radius: 50%;
     border: 3px solid #7652D9;
     box-shadow: 0 0 30px rgba(118, 82, 217, 0.20);
