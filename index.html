@@ -36,12 +36,11 @@
         <nav class="navbar">
 
             <!-- LOGO -->
-            <a href="#inicio" class="logo">
-                <img
-                    src="assets/images/logo/logo-horizontal-dark.png"
-                    alt="Daniel Poubel"
-                >
-            </a>
+            <img
+                id="logo-principal"
+                src="assets/images/logo/logo-horizontal-dark.png"
+                alt="Daniel Poubel"
+            >
             
             <button class="menu-toggle" id="menu-toggle"
                     type="button"
@@ -278,9 +277,94 @@
             </div>
 
         </section>
+        
+        
+        <!-- PROJETOS -->
+        <section class="projects" id="projetos">
 
-        <section id="projetos">
-            <h2>Projetos</h2>
+            <div class="section-heading">
+                <span class="section-tag">PORTFÓLIO</span>
+                <h2>Projetos em destaque</h2>
+                <p>Explore minhas soluções por categoria.</p>
+            </div>
+
+            <div class="projects-container">
+
+                <!-- SITES -->
+                <a href="projetos/sites/index.html" class="project-card">
+                    <div class="project-image category-cover category-sites">
+                        <span>WEB DEVELOPMENT</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Sites</h3>
+                        <p>Sites institucionais, landing pages e experiências digitais.</p>
+                        <span class="project-link">Explorar categoria →</span>
+                    </div>
+                </a>
+
+                <!-- APLICATIVOS -->
+                <a href="projetos/aplicativos/index.html" class="project-card">
+                    <div class="project-image category-cover category-apps">
+                        <span>APP DEVELOPMENT</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Aplicativos</h3>
+                        <p>Aplicações web e mobile para diferentes necessidades.</p>
+                        <span class="project-link">Explorar categoria →</span>
+                    </div>
+                </a>
+
+                <!-- GAMES -->
+                <a href="projetos/games/index.html" class="project-card">
+                    <div class="project-image project-image-vertical">
+                        <img src="assets/images/projects/loop-sky/gameplay.png"
+                            alt="Jogo Loop Sky">
+                    </div>
+                    <div class="project-content">
+                        <h3>Games</h3>
+                        <p>Jogos digitais e experiências interativas.</p>
+                        <span class="project-link">Explorar categoria →</span>
+                    </div>
+                </a>
+
+                <!-- AUTOMAÇÃO -->
+                <a href="projetos/automacao/index.html" class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/projects/rpa-produtos.png"
+                            alt="Automação de cadastro de produtos">
+                    </div>
+                    <div class="project-content">
+                        <h3>Automação</h3>
+                        <p>Automação de processos, tarefas e rotinas com Python.</p>
+                        <span class="project-link">Explorar categoria →</span>
+                    </div>
+                </a>
+
+                <!-- SISTEMAS -->
+                <a href="projetos/sistemas/index.html" class="project-card">
+                    <div class="project-image category-cover category-systems">
+                        <span>SYSTEM DEVELOPMENT</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Sistemas</h3>
+                        <p>Soluções digitais, gerenciamento de dados e processos.</p>
+                        <span class="project-link">Explorar categoria →</span>
+                    </div>
+                </a>
+
+                <!-- FERRAMENTAS -->
+                <a href="projetos/ferramentas/index.html" class="project-card">
+                    <div class="project-image category-cover category-tools">
+                        <span>DEV TOOLS</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>Ferramentas</h3>
+                        <p>Utilitários, recursos digitais e soluções práticas.</p>
+                        <span class="project-link">Explorar categoria →</span>
+                    </div>
+                </a>
+
+            </div>
         </section>
 
         <section id="contato">
@@ -295,6 +379,15 @@
             © 2026 Daniel Poubel. Todos os direitos reservados.
         </p>
     </footer>
+
+<button id="voltar-topo" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" width="20" height="20"
+         fill="none" stroke="currentColor"
+         stroke-width="2" stroke-linecap="round"
+         stroke-linejoin="round">
+        <path d="M5 14L12 7L19 14"/>
+    </svg>
+</button>
 
 </body>
 

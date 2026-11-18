@@ -55,3 +55,13 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
+// Botão voltar ao topo
+const voltarTopo = document.getElementById('voltar-topo');
+
+window.addEventListener('scroll', () => {
+    voltarTopo.classList.toggle('visivel', window.scrollY > 300);
+});
+
+voltarTopo.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
