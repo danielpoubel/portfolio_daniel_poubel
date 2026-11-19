@@ -22,6 +22,11 @@ const navLinks = navMenu.querySelectorAll('a');
 
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
+
+        if (link.getAttribute('href') === '#inicio') {
+            inicioAcionado = true;
+        }
+
         navMenu.classList.remove('active');
         menuToggle.classList.remove('active');
 
@@ -57,11 +62,21 @@ document.addEventListener('keydown', (event) => {
 
 // Botão voltar ao topo
 const voltarTopo = document.getElementById('voltar-topo');
+let inicioAcionado = false;
 
 window.addEventListener('scroll', () => {
-    voltarTopo.classList.toggle('visivel', window.scrollY > 300);
+
+    if (window.scrollY === 0) {
+        inicioAcionado = false;
+    }
+
+    voltarTopo.classList.toggle(
+        'visivel',
+        window.scrollY > 300 || (inicioAcionado && window.scrollY > 0)
+    );
 });
 
 voltarTopo.addEventListener('click', () => {
+    inicioAcionado = false;
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });

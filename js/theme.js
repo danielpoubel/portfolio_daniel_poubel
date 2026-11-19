@@ -1,6 +1,7 @@
 const botaoTema = document.getElementById('theme-toggle');
 const iconeTema = document.getElementById('theme-icon');
 const logoPrincipal = document.getElementById('logo-principal');
+const logoRodape = document.getElementById('logo-rodape');
 
 const temaSalvo = localStorage.getItem('tema') || 'dark';
 
@@ -12,6 +13,10 @@ function aplicarTema(tema) {
     logoPrincipal.src = tema === 'dark'
         ? 'assets/images/logo/logo-horizontal-dark.png'
         : 'assets/images/logo/logo-horizontal-light.png';
+
+    logoRodape.src = tema === 'dark'
+    ? 'assets/images/logo/logo-horizontal-dark.png'
+    : 'assets/images/logo/logo-horizontal-light.png';
 }
 
 aplicarTema(temaSalvo);

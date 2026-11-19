@@ -1,5 +1,9 @@
-/* ===== PÁGINA DE CATEGORIA: AUTOMAÇÃO ===== */
+/* ===== CSS COMPARTILHADO — PÁGINAS DE CATEGORIAS
+   Sites, Aplicativos, Games, Automação,
+   Sistemas e Ferramentas
+====== */
 
+/* ESTRUTURA DA PÁGINA */
 .category-page {
     min-height: 75vh;
     padding: 40px 8%;
@@ -12,7 +16,12 @@
 .category-page .section-heading h1 {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 2.4rem;
-    background: linear-gradient(90deg, #246BFD, #7652D9, #A855F7);
+    background: linear-gradient(
+        90deg,
+        #246BFD,
+        #7652D9,
+        #A855F7
+    );
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -23,17 +32,24 @@
     margin: 0 auto;
 }
 
+/* CARD DE PROJETO */
 .category-project-card {
     display: grid;
     grid-template-columns: 0.9fr 1.1fr;
     overflow: hidden;
     background:
         linear-gradient(#191F33, #191F33) padding-box,
-        linear-gradient(135deg, #246BFD, #7652D9, #A855F7) border-box;
+        linear-gradient(
+            135deg,
+            #246BFD,
+            #7652D9,
+            #A855F7
+        ) border-box;
     border: 1px solid transparent;
     border-radius: 16px;
 }
 
+/* IMAGEM DO PROJETO */
 .category-project-image {
     min-height: 280px;
     display: flex;
@@ -59,12 +75,21 @@
     content: "";
     position: absolute;
     inset: -10px;
-    background-image: url("../../assets/images/projects/rpa-produtos.png");
     background-size: cover;
     background-position: center;
     filter: blur(14px) brightness(0.45);
 }
 
+/* FUNDOS DAS IMAGENS */
+.category-project-image.image-automation::before {
+    background-image: url("../assets/images/projects/rpa-produtos.png");
+}
+
+.category-project-image.image-games::before {
+    background-image: url("../assets/images/projects/loop-sky/gameplay.png");
+}
+
+/* CONTEÚDO DO PROJETO */
 .category-project-content {
     display: flex;
     flex-direction: column;
@@ -90,24 +115,7 @@
     margin-bottom: 20px;
 }
 
-.category-project-content .project-link {
-    margin-top: 0;
-    text-decoration: none;
-}
-
-.category-project-content .project-link:hover {
-    filter: brightness(1.3);
-}
-
-/* RODAPÉ */
-.footer {
-    padding: 20px 8%;
-    text-align: center;
-    color: #B9C2D8;
-    font-size: 0.85rem;
-}
-
-/* AÇÕES */
+/* AÇÕES DOS PROJETOS */
 .project-actions {
     display: flex;
     flex-wrap: wrap;
@@ -131,7 +139,12 @@
     border-radius: 8px;
     background:
         linear-gradient(#191F33, #191F33) padding-box,
-        linear-gradient(135deg, #246BFD, #7652D9, #A855F7) border-box;
+        linear-gradient(
+            135deg,
+            #246BFD,
+            #7652D9,
+            #A855F7
+        ) border-box;
     color: #FFFFFF;
     font-size: 23px;
     text-decoration: none;
@@ -139,6 +152,49 @@
 }
 
 .github-icon:hover {
-    background: linear-gradient(135deg, #246BFD, #7652D9, #A855F7);
+    background: linear-gradient(
+        135deg,
+        #246BFD,
+        #7652D9,
+        #A855F7
+    );
     transform: translateY(-3px);
+}
+
+/* RODAPÉ DAS CATEGORIAS */
+.footer {
+    padding: 20px 8%;
+    text-align: center;
+    color: #B9C2D8;
+    font-size: 0.85rem;
+}
+
+/* AVISO DE PROJETOS EM BREVE */
+.category-coming-soon {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 65px 25px;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 16px;
+    background:
+        linear-gradient(#191F33, #191F33) padding-box,
+        linear-gradient(
+            135deg,
+            #246BFD,
+            #7652D9,
+            #A855F7
+        ) border-box;
+}
+
+.category-coming-soon h2 {
+    margin-bottom: 14px;
+    color: #FFFFFF;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.7rem;
+}
+
+.category-coming-soon p {
+    color: #B9C2D8;
+    line-height: 1.6;
 }
