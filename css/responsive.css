@@ -445,6 +445,34 @@
         font-size: 14px;
     }
 
+/* CARD EXPANDIDO NO CELULAR */
+.story-card.expanded {
+    width: 100%;
+    height: auto;
+    min-height: 280px;
+    overflow: hidden;
+    transform: none;
+    padding: 24px 18px;
+}
+
+.story-card.expanded .story-full {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    margin-top: 20px;
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
+
+.story-card.expanded .story-preview {
+    display: none;
+}
+
     .footer {
         min-height: 90px;
         padding: 20px 16px;
@@ -470,5 +498,19 @@
 @media (max-width: 600px) {
     .hero-profile::after {
         display: none;
+    }
+}
+
+@media (min-width: 1101px) and (max-width: 1280px) {
+    .story-card.expanded {
+        transform: none;
+        height: auto;
+        min-height: 435px;
+        overflow: visible;
+    }
+
+    .story-card.expanded .story-full {
+        font-size: 11px;
+        line-height: 1.5;
     }
 }
