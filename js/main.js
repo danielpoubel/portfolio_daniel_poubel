@@ -6,8 +6,6 @@ const navMenu = document.getElementById('nav-menu');
 menuToggle.addEventListener('click', () => {
     const menuAberto = navMenu.classList.toggle('active');
     menuToggle.classList.toggle('active', menuAberto);
-    console.log('Menu aberto:', menuAberto);
-    console.log('Classes do menu:', navMenu.className);
 
     menuToggle.setAttribute('aria-expanded', menuAberto);
 
