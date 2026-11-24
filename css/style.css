@@ -359,16 +359,16 @@ h1, h2, h3, h4 {
 
 .hero-content h1 {
     transform: translateY(-38px);
+    width: fit-content;
     font-size: clamp(42px, 5vw, 64px);
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 8px;
     background: linear-gradient(
-    180deg,
-    #246BFD 0%,
-    #4D8DFF 35%,
-    #7652D9 75%,
-    #A855F7 100%
+    90deg,
+    #246BFD,
+    #7652D9,
+    #A855F7
     );
     -webkit-background-clip: text;
     background-clip: text;
@@ -448,12 +448,12 @@ h1, h2, h3, h4 {
 /* ===== SOBRE MIM ===== */
 
 .about {
-    padding: 100px 10%;
+    padding: 15px 10% 55px;
 }
 
-.section-heading {
+.about .section-heading {
     text-align: center;
-    margin-bottom: 55px;
+    margin-bottom: 25px;
 }
 
 .section-tag {
@@ -902,3 +902,223 @@ h1, h2, h3, h4 {
 [data-theme="light"] .footer-social svg {
     fill: #191F33;
 }
+
+/* ===== MINHA TRAJETÓRIA — CARDS INTERATIVOS ===== */
+
+.about-stories {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;
+    gap: 14px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 12px;
+    position: relative;
+}
+
+.story-card {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: 0;
+    min-height: 350px;
+    padding: 24px 18px;
+    overflow: hidden;
+    border: 1px solid rgba(142, 175, 255, 0.25);
+    border-radius: 18px;
+    color: #FFFFFF;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    background-color: #101321;
+    background-size: cover;
+    background-position: center;
+
+    cursor: default;
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+/* CAMADA ESCURA SOBRE AS IMAGENS */
+
+.story-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background: linear-gradient(
+        180deg,
+        rgba(10, 15, 35, 0.35) 0%,
+        rgba(10, 15, 35, 0.65) 45%,
+        rgba(10, 15, 35, 0.96) 100%
+    );
+
+    transition: background 0.4s ease;
+}
+
+/* IMAGEM DE FUNDO */
+
+.story-yesterday,
+.story-today,
+.story-tomorrow,
+.story-purpose {
+    background-image: url("../assets/images/trajectory/trajectory-background.gif");
+    background-size: cover;
+    background-position: center;
+}
+
+/* TÍTULOS */
+
+.story-title {
+    width: 100%;
+    margin-bottom: 0;
+    color: #FFFFFF;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8);
+    position: relative;
+    z-index: 1;
+}
+
+.story-preview {
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 28px;
+
+    margin: 0;
+    text-align: center;
+}
+
+/* DESCRIÇÃO COMPLETA */
+
+.story-full {  
+    width: auto;
+    margin-top: 0;
+    color: #F3F5FA;
+    font-size: 12px;
+    line-height: 1.5;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.story-full strong {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto 18px;
+
+    background: linear-gradient(
+        90deg,
+        #246BFD,
+        #7652D9,
+        #A855F7
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 19px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* EXPANSÃO CENTRALIZADA DOS CARDS */
+
+.story-card.is-trigger-active {
+    opacity: 0;
+}
+
+.story-overlay {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: min(520px, 85vw) !important;
+    height: min(400px, 60vh);
+    min-height: 0;
+    max-height: 60vh;
+    padding: 35px 32px !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 9999 !important;
+    opacity: 1 !important;
+    pointer-events: none;
+    border-color: #7652D9;
+    box-shadow:
+        0 12px 35px rgba(36, 107, 253, 0.3),
+        0 0 35px rgba(118, 82, 217, 0.35);
+    animation: story-float-in 0.35s ease both;
+}
+
+.story-overlay .story-preview {
+    display: none;
+}
+
+.story-overlay .story-title {
+    margin-bottom: 28px;
+    flex-shrink: 0;
+}
+
+.story-overlay .story-full {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    margin: 0;
+    overflow: visible;
+    font-size: 15px;
+    line-height: 1.7;
+    opacity: 1;
+    transform: none;
+    text-align: justify;
+}
+
+.story-overlay::before {
+    background: linear-gradient(
+        180deg,
+        rgba(10, 15, 35, 0.75),
+        rgba(10, 15, 35, 0.97)
+    );
+}
+
+@keyframes story-float-in {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -46%) scale(0.94);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* ACESSIBILIDADE */
+
+.story-card:focus-visible {
+    outline: 2px solid #8EAFFF;
+    outline-offset: 4px;
+}
+
+.about .section-heading h2,
+.projects .section-heading h2 {
+    display: inline-block;
+    background: linear-gradient(
+        90deg,
+        #246BFD,
+        #7652D9,
+        #A855F7
+    );
+    -webkit-background-clip: text;
+    background-

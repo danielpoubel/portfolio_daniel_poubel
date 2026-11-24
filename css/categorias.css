@@ -16,12 +16,18 @@
 .category-page .section-heading h1 {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 2.4rem;
+
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+
     background: linear-gradient(
         90deg,
         #246BFD,
         #7652D9,
         #A855F7
     );
+
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
