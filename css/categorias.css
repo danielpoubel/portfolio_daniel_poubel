@@ -111,11 +111,11 @@
 
 /* FUNDOS DAS IMAGENS */
 .category-project-image.image-automation::before {
-    background-image: url("../assets/images/projects/rpa-produtos.png");
+    background-image: url("../assets/images/projects/rpa-produtos.webp");
 }
 
 .category-project-image.image-games::before {
-    background-image: url("../assets/images/projects/loop-sky/gameplay.png");
+    background-image: url("../assets/images/projects/loop-sky/gameplay.webp");
 }
 
 /* CONTEÚDO DO PROJETO */
