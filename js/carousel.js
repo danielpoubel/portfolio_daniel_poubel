@@ -1,4 +1,3 @@
-
 // ===== CARROSSEL DE TECNOLOGIAS =====
 
 const techTrack = document.getElementById('tech-track');

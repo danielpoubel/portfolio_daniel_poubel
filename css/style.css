@@ -387,7 +387,7 @@ h1, h2, h3, h4 {
 .hero-content h2 {
     font-size: 27px;
     font-weight: 600;
-    color: var(--cor-destaque-texto);
+    color: var(--cor-texto);
     margin-bottom: 18px;
 }
 
@@ -976,7 +976,7 @@ h1, h2, h3, h4 {
 .story-today,
 .story-tomorrow,
 .story-purpose {
-    background-image: url("../assets/images/trajectory/trajectory-background.gif");
+    background-image: url("../assets/images/trajectory/trajectory-background.webp");
     background-size: cover;
     background-position: center;
 }
@@ -1145,4 +1145,17 @@ h1, h2, h3, h4 {
             0 0 15px rgba(118, 82, 217, 0.25);
     }
 
+}
+
+/* TÍTULOS ACESSÍVEIS */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
