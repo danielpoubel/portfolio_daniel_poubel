@@ -14,14 +14,14 @@ function aplicarTema(tema) {
 
     if (logoPrincipal) {
         logoPrincipal.src = tema === 'dark'
-            ? 'assets/images/logo/logo-horizontal-dark.png'
-            : 'assets/images/logo/logo-horizontal-light.png';
+            ? 'assets/images/logo/logo-horizontal-dark.webp'
+            : 'assets/images/logo/logo-horizontal-light.webp';
     }
 
     if (logoRodape) {
         logoRodape.src = tema === 'dark'
-            ? 'assets/images/logo/logo-horizontal-dark.png'
-            : 'assets/images/logo/logo-horizontal-light.png';
+            ? 'assets/images/logo/logo-horizontal-dark.webp'
+            : 'assets/images/logo/logo-horizontal-light.webp';
     }
 }
 
