@@ -713,7 +713,7 @@ h1, h2, h3, h4 {
 
 .project-image-vertical {
     position: relative;
-    background-image: url("../assets/images/projects/loop-sky/gameplay.png");
+    background-image: url("../assets/images/projects/loop-sky/gameplay.webp");
     background-size: cover;
     background-position: center;
 }
