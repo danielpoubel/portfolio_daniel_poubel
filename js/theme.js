@@ -3,6 +3,9 @@ const iconeTema = document.getElementById('theme-icon');
 const logoPrincipal = document.getElementById('logo-principal');
 const logoRodape = document.getElementById('logo-rodape');
 
+// Localiza a pasta de imagens a partir do próprio arquivo JS
+const caminhoLogos = new URL('../assets/images/logo/', document.currentScript.src);
+
 const temaSalvo = localStorage.getItem('tema') || 'dark';
 
 function aplicarTema(tema) {
@@ -12,16 +15,18 @@ function aplicarTema(tema) {
         iconeTema.textContent = tema === 'dark' ? '☀' : '☾';
     }
 
+    const arquivoLogo = tema === 'dark'
+        ? 'logo-horizontal-dark.webp'
+        : 'logo-horizontal-light.webp';
+
+    const caminhoLogo = new URL(arquivoLogo, caminhoLogos).href;
+
     if (logoPrincipal) {
-        logoPrincipal.src = tema === 'dark'
-            ? 'assets/images/logo/logo-horizontal-dark.webp'
-            : 'assets/images/logo/logo-horizontal-light.webp';
+        logoPrincipal.src = caminhoLogo;
     }
 
     if (logoRodape) {
-        logoRodape.src = tema === 'dark'
-            ? 'assets/images/logo/logo-horizontal-dark.webp'
-            : 'assets/images/logo/logo-horizontal-light.webp';
+        logoRodape.src = caminhoLogo;
     }
 }
 
